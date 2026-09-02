@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VakponTour · Voyages sur mesure au Bénin</title>
+<meta name="description" content="VakponTour imagine des voyages sur mesure au Bénin : circuits locaux, hébergements choisis et accompagnement personnalisé.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <a href="index.html" class="logo" aria-label="VakponTour, accueil">
+    <svg viewBox="0 0 260 60">
+      <path d="M4 40 Q30 52 56 40 L50 44 Q30 50 10 44 Z" fill="#2474C6"/>
+      <line x1="30" y1="40" x2="30" y2="14" stroke="#102A43" stroke-width="2"/>
+      <path d="M30 15 L46 36 L30 36 Z" fill="#2474C6"/>
+      <text x="70" y="38" font-family="Montserrat, sans-serif" font-weight="700" font-size="24" fill="currentColor">Vakpon<tspan fill="#2474C6">Tour</tspan></text>
+    </svg>
+  </a>
+  <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="circuits.html">Circuits</a>
+    <a href="hotels.html">Hôtels</a>
+    <a href="about.html">À propos</a>
+    <a href="calendar.html">Calendrier</a>
+    <a href="contact.html">Contact</a>
+    <a href="create-trip.html" class="btn btn-gold nav-cta-mobile">Créer mon voyage</a>
+  </nav>
+  <div class="header-actions">
+    <a href="create-trip.html" class="btn btn-gold nav-cta">Créer mon voyage</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/video_hero_1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="reveal-up" style="animation-delay:.1s">Un pays,<br>cinq visages,<br>un seul voyage.</h1>
+    <p class="reveal-up" style="animation-delay:.35s">VakponTour construit votre itinéraire au Bénin : cités lacustres, mémoire de Ouidah, plages de Grand-Popo, sur mesure du premier au dernier kilomètre.</p>
+    <div class="hero-actions reveal-up" style="animation-delay:.55s">
+      <a href="create-trip.html" class="btn btn-gold">Composer mon itinéraire</a>
+      <a href="circuits.html" class="btn btn-outline">Voir les circuits</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <p>Le<span class="dropcap">B</span>énin ne se résume pas à une carte postale. C'est un pays historique posé sur une lagune, un port qui ne s'arrête jamais, une ville entière construite sur pilotis, et une côte qui garde la mémoire d'un continent.Entre traditions vivantes et modernité vibrante, VakponTour vous y emmène, à votre rythme, à travers des voyages sur mesure et exclusifs.</p>
+</section>
+
+<section class="destinations">
+  <h2>Cinq visages du Bénin</h2>
+
+  <div class="dest-list">
+    <a href="circuits.html#cotonou" class="dest-item">
+      <div class="dest-img"><img src="images/Cotonou_1.jpg" alt="Cotonou"></div>
+      <div class="dest-text">
+        <h3>Cotonou</h3>
+        <p>La ville qui ne dort jamais vraiment : marchés, art urbain, bord de mer.</p>
+      </div>
+    </a>
+
+    <a href="circuits.html#porto-novo" class="dest-item reverse">
+      <div class="dest-img"><img src="images/porto_novo.jpeg" alt="Porto-Novo"></div>
+      <div class="dest-text">
+        <h3>Porto-Novo</h3>
+        <p>La capitale historique, entre palais royaux et influences afro-brésiliennes.</p>
+      </div>
+    </a>
+
+    <a href="circuits.html#ouidah" class="dest-item">
+      <div class="dest-img"><img src="images/Ouidah_1.jpeg" alt="Ouidah"></div>
+      <div class="dest-text">
+        <h3>Ouidah</h3>
+        <p>Berceau du Vodun, terre de mémoire face à l'Atlantique.</p>
+      </div>
+    </a>
+
+    <a href="circuits.html#grand-popo" class="dest-item reverse">
+      <div class="dest-img"><img src="images/grand_popo.jpg" alt="Grand-Popo"></div>
+      <div class="dest-text">
+        <h3>Grand-Popo</h3>
+        <p>Le Bénin qui ralentit, entre plages sauvages et embouchures tranquilles.</p>
+      </div>
+    </a>
+
+    <a href="circuits.html#ganvie" class="dest-item">
+      <div class="dest-img"><img src="images/ganviee.jpg" alt="Ganvié"></div>
+      <div class="dest-text">
+        <h3>Ganvié</h3>
+        <p>Un village entier posé sur l'eau, à la pirogue.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="steps">
+  <h2>Comment ça marche</h2>
+  <div class="steps-list">
+    <div class="step">
+      <span class="step-num">01</span>
+      <h3>Dites-nous où vous rêvez d'aller</h3>
+      <p>Quelques questions sur vos envies, votre budget et le temps dont vous disposez.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <h3>On construit votre itinéraire</h3>
+      <p>Circuits, hébergements et transports assemblés spécifiquement pour vous.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <h3>Vous partez, on s'occupe du reste</h3>
+      <p>Un accompagnement local du premier jour au dernier.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="section-heading"><span class="eyebrow">Voyager sereinement</span><h2>Une équipe locale, à vos côtés.</h2></div>
+  <div class="trust-grid">
+    <article><strong>24 h</strong><h3>Réponse rapide</h3><p>Nous revenons vers vous avec une première orientation claire.</p></article>
+    <article><strong>100 %</strong><h3>Partenaires vérifiés</h3><p>Chaque étape et chaque adresse sont sélectionnées sur le terrain.</p></article>
+    <article><strong>Local</strong><h3>Accompagnement réel</h3><p>Une équipe béninoise vous suit avant, pendant et après le séjour.</p></article>
+  </div>
+</section>
+<section class="testimonial-section">
+  <div class="section-heading"><span class="eyebrow">Ils ont voyagé avec nous</span><h2>Des souvenirs qui restent.</h2></div>
+  <div class="testimonial-grid">
+    <blockquote><p>“Un itinéraire juste, fluide et profondément humain. Nous avons découvert le Bénin autrement.”</p><footer>Camille et Thomas · France</footer></blockquote>
+    <blockquote><p>“Chaque accueil était chaleureux, chaque transfert simple. Une vraie tranquillité d’esprit.”</p><footer>Aïcha · Belgique</footer></blockquote>
+  </div>
+</section>
+<section class="itinerary-section">
+  <div class="section-heading"><span class="eyebrow">Nos itinéraires signatures</span><h2>Un premier voyage, déjà inspiré.</h2><p>Des bases vivantes à adapter selon votre rythme, vos envies et votre budget.</p></div>
+  <div class="itinerary-grid">
+    <article class="itinerary-card"><span>5 jours · Sud culturel</span><h3>De Cotonou à Ouidah</h3><p>Marchés, art, mémoire et océan pour une première rencontre intense avec le Bénin.</p><a class="card-link" href="create-trip.html">Partir de cette idée</a></article>
+    <article class="itinerary-card"><span>7 jours · Lagunes & patrimoine</span><h3>Porto-Novo, Ganvié & la côte</h3><p>Une boucle douce entre architecture, pirogues, rencontres et nuits choisies.</p><a class="card-link" href="create-trip.html">Partir de cette idée</a></article>
+    <article class="itinerary-card"><span>10 jours · Bénin essentiel</span><h3>Le grand équilibre</h3><p>Une immersion complète, avec du temps pour explorer sans courir d'une étape à l'autre.</p><a class="card-link" href="create-trip.html">Partir de cette idée</a></article>
+  </div>
+</section>
+<section class="faq-section">
+  <div class="section-heading"><span class="eyebrow">Questions fréquentes</span><h2>Tout savoir avant de partir.</h2></div>
+  <div class="faq-list"><details><summary>Quelle est la meilleure période pour voyager ?</summary><p>Nous vous aidons à choisir selon la météo, les événements culturels et le rythme du séjour.</p></details><details><summary>Les circuits sont-ils personnalisables ?</summary><p>Oui. Durée, étapes, hébergements, activités et accompagnement sont ajustés avec vous.</p></details><details><summary>Organisez-vous les transferts et les guides ?</summary><p>Oui, nous pouvons prévoir l'accueil, les transferts, les guides locaux et les activités.</p></details></div>
+</section>
+<section class="cta-band">
+  <h2>Votre voyage au Bénin commence par une conversation.</h2>
+  <a href="create-trip.html" class="btn btn-gold">Créer mon voyage</a>
+  <a href="https://wa.me/2290159055088?text=Bonjour%20VakponTour%2C%20je%20souhaite%20pr%C3%A9parer%20un%20voyage%20au%20B%C3%A9nin." class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer">Échanger avec un conseiller</a>
+</section>
+
+<footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo-vakpontour-white.png" alt="VakponTour">
+          <p class="footer-tagline">Agence de voyages locale au Bénin. Circuits sur mesure, hébergements choisis et accompagnement du premier au dernier kilomètre.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H7.5v3h2.8v8h3.2z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Destinations">
+          <h3>Destinations</h3>
+          <a href="circuits.html#cotonou">Cotonou</a>
+          <a href="circuits.html#porto-novo">Porto-Novo</a>
+          <a href="circuits.html#ouidah">Ouidah</a>
+          <a href="circuits.html#grand-popo">Grand-Popo</a>
+          <a href="circuits.html#ganvie">Ganvié</a>
+        </nav>
+        <nav class="footer-col" aria-label="VakponTour">
+          <h3>VakponTour</h3>
+          <a href="circuits.html">Circuits</a>
+          <a href="hotels.html">Hôtels</a>
+          <a href="calendar.html">Calendrier</a>
+                <a href="about.html">À propos</a>
+          <a href="create-trip.html">Créer mon voyage</a>
+        </nav>
+        <div class="footer-col footer-contact">
+          <h3>Contact</h3>
+          <address>
+            Cotonou, République du Bénin
+          </address>
+          <a href="tel:+2290159055088000">+229 01 59 05 50 88</a>
+          <a href="mailto:contact@vakpontour.com">contact@vakpontour.com</a>
+          <p class="footer-hours">Lun – Sam · 8h – 18h (GMT+1)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 VakponTour · Cotonou, Bénin</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* Point d’entrée CSS partagé par toutes les pages VakponTour.
+   style.css reste chargé en second pendant la migration pour garantir
+   exactement le rendu actuel. */
+@import url("./modules/base.css");
+@import url("./modules/header.css");
+@import url("./modules/mobile-nav.css");
+@import url("./modules/hero.css");
+@import url("./modules/components.css");
+@import url("./modules/pages.css");
+@import url("./modules/footer.css");
+@import url("./style.css");

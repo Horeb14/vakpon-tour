@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos hébergements · VakponTour</title>
+  <meta name="description" content="Trouvez une adresse de charme à Cotonou, Ouidah, Porto-Novo ou Grand-Popo avec la sélection locale de VakponTour.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="inner-page stays-page">
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="logo" aria-label="VakponTour, accueil"></a>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="circuits.html">Circuits</a>
+      <a href="hotels.html" class="active">Hôtels</a>
+      <a href="about.html">À propos</a>
+      <a href="calendar.html">Calendrier</a>
+      <a href="contact.html">Contact</a>
+      <a href="create-trip.html" class="btn btn-gold nav-cta-mobile">Créer mon voyage</a>
+    </nav>
+    <div class="header-actions">
+      <a href="create-trip.html" class="btn btn-gold nav-cta">Créer mon voyage</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero page-hero stays-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content page-hero-content page-hero-content--full">
+        <span class="eyebrow reveal-up" style="animation-delay:.1s">Nos adresses partenaires</span>
+        <h1 class="reveal-up" style="animation-delay:.2s">Choisir une adresse, sentir un lieu.</h1>
+        <p class="reveal-up" style="animation-delay:.35s">Des hébergements choisis pour vous faire vivre chaque destination avec justesse.</p>
+      </div>
+    </section>
+
+    <section class="stays-intro">
+      <span class="eyebrow">Dormir au bon endroit</span>
+      <h2>Une attention qui change l'étape.</h2>
+      <p>Chaque séjour se construit avec une adresse adaptée à votre rythme, à votre budget et à la personnalité de la ville.</p>
+    </section>
+
+    <section class="stays-grid" aria-label="Hébergements par ville">
+      <article class="stay-card">
+        <div class="stay-photo-space"><img src="images/hotel_cotonou.jpg" alt="Hébergement sélectionné à Cotonou"></div>
+        <div class="stay-card-copy"><span class="stay-index">01 / Cotonou</span><h2>Le mouvement de la ville</h2><p>Entre les adresses contemporaines, les tables locales et le front de mer, Cotonou est une première escale vive et confortable.</p><button class="stay-arrow" type="button" aria-label="Découvrir les hôtels à Cotonou">→</button></div>
+      </article>
+      <article class="stay-card stay-card--inverse">
+        <div class="stay-photo-space"><img src="images/hotel_ouidah.jpg" alt="Hébergement sélectionné à Ouidah"></div>
+        <div class="stay-card-copy"><span class="stay-index">02 / Ouidah</span><h2>Une escale habitée</h2><p>Ouidah invite à ralentir. Nous y recherchons des maisons calmes, proches de la mémoire, de l'art et de l'océan.</p><button class="stay-arrow" type="button" aria-label="Découvrir les hôtels à Ouidah">→</button></div>
+      </article>
+      <article class="stay-card">
+        <div class="stay-photo-space"><img src="images/hotel_porto_novo.jpg" alt="Hébergement sélectionné à Porto-Novo"></div>
+        <div class="stay-card-copy"><span class="stay-index">03 / Porto-Novo</span><h2>Le temps du patrimoine</h2><p>Dans la capitale historique, l'hospitalité prend le goût des cours ombragées, des façades anciennes et des rencontres sincères.</p><button class="stay-arrow" type="button" aria-label="Découvrir les hôtels à Porto-Novo">→</button></div>
+      </article>
+      <article class="stay-card stay-card--inverse">
+        <div class="stay-photo-space"><img src="images/hotel_grand_popo.jpeg" alt="Hébergement sélectionné à Grand-Popo"></div>
+        <div class="stay-card-copy"><span class="stay-index">04 / Grand-Popo</span><h2>Le large, tout simplement</h2><p>Grand-Popo est la parenthèse côtière: des nuits bercées par l'Atlantique et des journées ouvertes sur le sable.</p><button class="stay-arrow" type="button" aria-label="Découvrir les hôtels à Grand-Popo">→</button></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>© VakponTour</span>
+      <a href="contact.html">Parlons de votre prochain voyage</a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Circuits au Bénin · VakponTour</title>
+    <meta name="description" content="Explorez le Bénin avec les circuits personnalisables de VakponTour : Cotonou, Porto-Novo, Ouidah, Ganvié et Grand-Popo.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header" id="site-header">
+
+        <!-- Logo -->
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="VakponTour, accueil"
+        >
+            <svg viewBox="0 0 260 60">
+
+                <path
+                    d="M4 40 Q30 52 56 40 L50 44 Q30 50 10 44 Z"
+                    fill="#2474C6"
+                />
+
+                <line
+                    x1="30"
+                    y1="40"
+                    x2="30"
+                    y2="14"
+                    stroke="#102A43"
+                    stroke-width="2"
+                />
+
+                <path
+                    d="M30 15 L46 36 L30 36 Z"
+                    fill="#2474C6"
+                />
+
+                <text
+                    x="70"
+                    y="38"
+                    font-family="Montserrat, sans-serif"
+                    font-weight="700"
+                    font-size="24"
+                    fill="currentColor"
+                >
+                    Vakpon<tspan fill="#2474C6">Tour</tspan>
+                </text>
+
+            </svg>
+        </a>
+
+
+        <!-- Navigation principale -->
+        <nav
+            class="main-nav"
+            id="main-nav"
+            aria-label="Navigation principale"
+        >
+            <a href="index.html">Accueil</a>
+            <a href="circuits.html" class="active">Circuits</a>
+            <a href="hotels.html">Hôtels</a>
+
+            <a href="about.html">À propos</a>
+            <a href="calendar.html">Calendrier</a>
+            <a href="contact.html">Contact</a>
+
+            <!-- CTA mobile -->
+            <a
+                href="create-trip.html"
+                class="btn btn-gold nav-cta-mobile"
+            >
+                Créer mon voyage
+            </a>
+        </nav>
+
+
+        <!-- Actions du header -->
+        <div class="header-actions">
+
+            <!-- CTA desktop -->
+            <a
+                href="create-trip.html"
+                class="btn btn-gold nav-cta"
+            >
+                Créer mon voyage
+            </a>
+
+            <!-- Menu burger -->
+            <button
+                class="burger"
+                id="burger"
+                aria-label="Ouvrir le menu"
+                aria-controls="main-nav"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Fond du menu mobile -->
+    <div
+        class="nav-backdrop"
+        id="nav-backdrop"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero page-hero-circuits">
+
+            <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+                <source src="videos/video_hero_2.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="eyebrow reveal-up" style="animation-delay:.05s">
+                    Voyager autrement
+                </span>
+
+                <h1 class="reveal-up" style="animation-delay:.1s">
+                    Des circuits qui suivent votre rythme.
+                </h1>
+
+                <p class="reveal-up" style="animation-delay:.35s">
+                    Du littoral aux palais royaux, découvrez le Bénin
+                    avec des itinéraires construits pour prendre le temps.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NOS CIRCUITS
+        ========================== -->
+        <section class="page-section">
+
+            <!-- Introduction -->
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Nos suggestions
+                </span>
+
+                <h2>
+                    Choisissez un point de départ.
+                </h2>
+
+                <p>
+                    Chaque circuit est modulable : durée, hébergements,
+                    activités et accompagnement local.
+                </p>
+
+            </div>
+
+
+            <!-- Grille des circuits -->
+            <div class="circuit-grid">
+
+                <!-- =========================
+                     CIRCUIT 1 — COTONOU
+                ========================== -->
+                <article
+                    class="travel-card"
+                    id="cotonou"
+                >
+
+                    <img
+                        src="images/cotonou_2.jpg"
+                        alt="Vue de Cotonou"
+                    >
+
+                    <div class="travel-card-body">
+
+                        <div class="travel-card-meta">
+
+                            <span>
+                                3 jours
+                            </span>
+
+                            <span>
+                                Cotonou · Ouidah
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Entre ville et mémoire
+                        </h3>
+
+                        <p>
+                            Marchés, art contemporain, Route des Esclaves
+                            et coucher de soleil sur l’Atlantique.
+                        </p>
+
+                        <a
+                            class="card-link"
+                            href="contact.html"
+                        >
+                            Personnaliser ce circuit
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CIRCUIT 2 — PORTO-NOVO
+                ========================== -->
+                <article
+                    class="travel-card"
+                    id="porto-novo"
+                >
+
+                    <img
+                        src="images/ganvie_1.jpg"
+                        alt="Architecture de Porto-Novo"
+                    >
+
+                    <div class="travel-card-body">
+
+                        <div class="travel-card-meta">
+
+                            <span>
+                                4 jours
+                            </span>
+
+                            <span>
+                                Porto-Novo · Ganvié
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Lagunes et héritages
+                        </h3>
+
+                        <p>
+                            Une immersion entre patrimoine afro-brésilien,
+                            pirogues et quartiers historiques.
+                        </p>
+
+                        <a
+                            class="card-link"
+                            href="contact.html"
+                        >
+                            Personnaliser ce circuit
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CIRCUIT 3 — GRAND-POPO
+                ========================== -->
+                <article
+                    class="travel-card"
+                    id="grand-popo"
+                >
+
+                    <img
+                        src="images/grandpopo.webp"
+                        alt="Plage de Grand-Popo"
+                    >
+
+                    <div class="travel-card-body">
+
+                        <div class="travel-card-meta">
+
+                            <span>
+                                5 jours
+                            </span>
+
+                            <span>
+                                Ouidah · Grand-Popo
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            La côte en douceur
+                        </h3>
+
+                        <p>
+                            Une parenthèse entre plage, villages côtiers
+                            et paysages qui invitent à ralentir.
+                        </p>
+
+                        <a
+                            class="card-link"
+                            href="contact.html"
+                        >
+                            Personnaliser ce circuit
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+        <section class="cta-band">
+
+            <h2>
+                Une envie particulière ?
+                Créons un itinéraire rien qu’à vous.
+            </h2>
+
+            <a
+                href="create-trip.html"
+                class="btn btn-gold"
+            >
+                Créer mon voyage
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo-vakpontour-white.png" alt="VakponTour">
+          <p class="footer-tagline">Agence de voyages locale au Bénin. Circuits sur mesure, hébergements choisis et accompagnement du premier au dernier kilomètre.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V10H7.5v3h2.8v8h3.2z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Destinations">
+          <h3>Destinations</h3>
+          <a href="circuits.html#cotonou">Cotonou</a>
+          <a href="circuits.html#porto-novo">Porto-Novo</a>
+          <a href="circuits.html#ouidah">Ouidah</a>
+          <a href="circuits.html#grand-popo">Grand-Popo</a>
+          <a href="circuits.html#ganvie">Ganvié</a>
+        </nav>
+        <nav class="footer-col" aria-label="VakponTour">
+          <h3>VakponTour</h3>
+          <a href="circuits.html">Circuits</a>
+          <a href="hotels.html">Hôtels</a>
+          <a href="calendar.html">Calendrier</a>
+
+          <a href="about.html">À propos</a>
+          <a href="create-trip.html">Créer mon voyage</a>
+        </nav>
+        <div class="footer-col footer-contact">
+          <h3>Contact</h3>
+          <address>
+            Cotonou, République du Bénin
+          </address>
+          <a href="tel:+2290159055088000">+229 01 59 05 50 88</a>
+          <a href="mailto:contact@vakpontour.com">contact@vakpontour.com</a>
+          <p class="footer-hours">Lun – Sam · 8h – 18h (GMT+1)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 VakponTour · Cotonou, Bénin</p>
+        <div class="footer-legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+```

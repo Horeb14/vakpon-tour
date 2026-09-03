@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
     var map = L.map(beninMap, { scrollWheelZoom: false, zoomControl: true }).setView([6.40, 2.25], 10);
     // Fond OpenStreetMap public : aucun compte ni API key n'est nécessaire.
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', 
+      {
       maxZoom: 19,
-      attribution: '&copy; OpenStreetMap contributors'
+      attribution: '&copy; OpenStreetMap contributors & copy; CARTO'
     }).addTo(map);
     var mapFallback = document.createElement('a');
     mapFallback.className = 'benin-map-fallback';
@@ -63,8 +64,16 @@ document.addEventListener('DOMContentLoaded', function () {
   /* La page active est déterminée automatiquement à chaque chargement. */
   if (nav) {
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    nav.querySelectorAll('a:not(.nav-cta-mobile)').forEach(function (link) {
-      var isCurrentPage = link.getAttribute('href') === currentPage;
+    if (!/\.html$/.test(currentPage)) currentPage += '.html';
+    var navLinks = nav.querySelectorAll('a:not(.nav-cta-mobile)');
+    navLinks.forEach(function (navLink) {
+      navLink.classList.remove('active');
+      navLink.removeAttribute('aria-current');
+    });
+    navLinks.forEach(function (link) {
+      var linkPage = (link.getAttribute('href') || '').split('#')[0].split('?')[0];
+      if (!/\.html$/.test(linkPage)) linkPage += '.html';
+      var isCurrentPage = linkPage === currentPage;
       link.classList.toggle('active', isCurrentPage);
       if (isCurrentPage) {
         link.setAttribute('aria-current', 'page');
@@ -279,8 +288,8 @@ document.addEventListener('DOMContentLoaded', function () {
     backdrop.classList.add('open');
     backdrop.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    var firstLink = nav.querySelector('a');
-    if (firstLink) firstLink.focus();
+    var firstLink = nav.querySelector('a.active') || nav.querySelector('a');
+   if (firstLink) firstLink.focus();
   }
 
   function closeMenu() {

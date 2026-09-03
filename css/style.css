@@ -471,17 +471,17 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    max-width: 320px;
-    height: 100vh;
+    inset: 0;
+    width: auto;
+    max-width: none;
+    height: 100dvh;
+    min-height: 100vh;
     background: #FFFFFF;
-    padding: 7.5rem 2rem 2rem;
-    gap: .35rem;
+    padding: 7rem 2rem 2.5rem;
+    gap: .9rem;
     box-shadow: -12px 0 40px rgba(8,31,58,.16);
     transform: translateX(100%);
-    transition: transform .55s cubic-bezier(.16,.84,.3,1);
+    transition: transform .25s ease-out;
     z-index: 150;
   }
 
@@ -490,17 +490,15 @@ h1, h2, h3 {
     transform: translateX(48px) rotate(2deg);
   }
   .main-nav.open a {
-    animation: plane-fly-in .55s cubic-bezier(.22,1,.36,1) forwards;
+    animation: plane-fly-in .2s ease-out forwards;
+    animation-delay: 0s;
   }
-  .main-nav.open a:nth-child(1) { animation-delay: .10s; }
-  .main-nav.open a:nth-child(2) { animation-delay: .16s; }
-  .main-nav.open a:nth-child(3) { animation-delay: .22s; }
-  .main-nav.open a:nth-child(4) { animation-delay: .28s; }
-  .main-nav.open a:nth-child(5) { animation-delay: .34s; }
-  .main-nav.open a:nth-child(6) { animation-delay: .40s; }
-  .main-nav.open a:nth-child(7) { animation-delay: .46s; }
-  .main-nav.open a:nth-child(8) { animation-delay: .52s; }
   .main-nav.open { transform: translateX(0); }
+  .main-nav .nav-cta-mobile {
+    margin-top: 1.1rem;
+    text-align: center;
+    justify-content: center;
+  }
 
   /* ===== Animation avion : traînée pointillée + atterrissage en douceur ===== */
   .main-nav::before {
@@ -527,7 +525,11 @@ h1, h2, h3 {
   }
   .main-nav.open {
     transform: translateX(0);
-    animation: plane-land .6s cubic-bezier(.22,1,.36,1);
+  }
+  .main-nav .nav-cta-mobile {
+    margin-top: 1.1rem;
+    text-align: center;
+    justify-content: center;
   }
   .main-nav.open::before { opacity: 1; }
   .main-nav.open::after {
@@ -543,9 +545,10 @@ h1, h2, h3 {
 
   .main-nav a {
     color: var(--encre) !important;
+    width: 100%;
     font-size: 1.05rem;
     font-weight: 600;
-    padding: .85rem 1rem;
+    padding: 1rem 1.1rem;
     border-radius: .65rem;
     transition: background .2s ease, color .2s ease, transform .2s ease;
   }
@@ -621,7 +624,7 @@ h1, h2, h3 {
 .page-hero h1 { font-size: clamp(2.7rem, 5vw, 4.6rem); margin-bottom: 1rem; }
 .page-hero p { max-width: 560px; font-size: 1.08rem; color: rgba(255,255,255,.88); }
 .page-hero-circuits { background-image: url('../images/ouidah.jpeg'); background-position: center 42%; }
-.page-hero-hotels { background-image: url('../images/grdpopo.jpeg'); }
+.page-hero-hotels { background-image: url('../images/grppp.png'); background-position: center 42%; }
 .page-hero-story { background-image: url('../images/porto_novo.jpeg'); background-position: center 40%; }
 .page-hero-contact { background-image: url('../images/cotonou_2.jpg'); background-position: center 42%; }
 
@@ -682,19 +685,51 @@ h1, h2, h3 {
 }
 
 @media (max-width: 600px) {
+  .hero,
+  .page-hero,
+  .about-hero {
+    align-items: center;
+  }
+  .hero-content,
+  .page-hero-content,
+  .about-hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.15rem 3rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .hero-content p { margin-inline: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-content h1,
+  .page-hero h1,
+  .about-hero h1 { font-size: clamp(1.45rem, 6vw, 2rem) !important; text-align: center; }
+  .hero-content strong,
+  .page-hero strong,
+  .hero-content b,
+  .page-hero b { font-size: .92em; }
+  h1 strong, h2 strong, h3 strong, h1 b, h2 b, h3 b { font-size: .92em; }
   .site-header { padding: .7rem .9rem; }
   .site-header.scrolled { padding: .65rem .9rem; }
   .logo { width: 100px; height: 100px; }
   .logo::before { width: 100px; height: 100px; }
   .header-actions { gap: .45rem; }
   .btn.nav-cta { display: none; }
-  .main-nav { width: calc(100% - 2.25rem); max-width: 360px; padding: 6rem 1.25rem 1.5rem; }
-  .main-nav a { font-size: 1rem; padding: .72rem .85rem; }
-  .nav-cta-mobile { margin-top: .8rem; }
+  .main-nav { inset: 0; width: auto; max-width: none; height: 100dvh; min-height: 100vh; padding: 7rem 1.25rem 2.5rem; gap: .9rem; }
+  .main-nav a { width: 100%; font-size: 1rem; padding: 1rem .85rem; }
+  .nav-cta-mobile { margin-top: 1.1rem; }
   .hero { min-height: 560px; height: 100svh; }
-  .hero-content { padding: 0 1.15rem 2.75rem; }
-  .hero-content h1 { font-size: clamp(2.35rem, 11vw, 3.1rem); }
-  .hero-content p { font-size: .96rem; }
+  .hero-content { padding: 0 1.15rem; }
+  .hero-content h1,
+  .page-hero h1,
+  .about-hero h1 { font-size: clamp(1.85rem, 8vw, 2.45rem); }
+  .hero-content p { font-size: .92rem; }
+  .hero-content h1 strong,
+  .page-hero h1 strong,
+  .about-hero h1 strong,
+  .hero-content h1 b,
+  .page-hero h1 b,
+  .about-hero h1 b { font-size: .84em; }
   .hero-actions { gap: .7rem; }
   .hero-actions .btn { width: 100%; }
   .page-hero { min-height: 410px; padding: 7rem 1.15rem 2.5rem; }
@@ -969,7 +1004,7 @@ h1, h2, h3 {
 }
 
 .about-page .about-hero {
-  background: url('../images/hero_a_propos.jpg') center / cover no-repeat;
+  background: url('../images/hero_propos.png') center / cover no-repeat;
   min-height: 100vh;
 }
 .about-page .about-hero::before {
@@ -1047,13 +1082,13 @@ h1, h2, h3 {
   /* Sur mobile, le texte du hero remonte au-dessus de l'image,
      reste centré dans la zone mais conserve une lecture à gauche. */
   .about-page .about-hero {
-    align-items: flex-start;
+    align-items: center;
   }
   .about-page .about-hero-content {
     width: 100%;
     margin: 0;
-    padding: 8.5rem 1.15rem 2.75rem;
-    text-align: left;
+    padding: 0 1.15rem;
+    text-align: center;
   }
   .about-page .about-hero-content h1 {
     margin-bottom: 1.25rem;
@@ -1106,7 +1141,7 @@ h1, h2, h3 {
   background-position: center 40%;
 }
 .hero.page-hero-calendar {
-  background: url('../images/ouidahh.jpg') center 45% / cover no-repeat;
+  background: url('../images/ouidahhh.png') center 45% / cover no-repeat;
 }
 .hero.page-hero-contact {
   background-image: url('../images/hero_contact.png');
@@ -1120,11 +1155,15 @@ h1, h2, h3 {
 @media (max-width: 600px) {
   .hero.page-hero .page-hero-content--full {
     max-width: none;
-    padding: 0 1.15rem 2.75rem;
+    padding: 0 1.15rem;
+    text-align: center;
+    margin-inline: auto;
   }
   .hero.page-hero .page-hero-content--full h1 {
-    font-size: clamp(2.8rem, 14vw, 4.2rem);
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    text-align: center;
   }
+  .hero.page-hero .page-hero-content--full p { margin-inline: auto; text-align: center; }
 }
 
 /* ===== Héros : mêmes proportions que la page À propos ===== */
@@ -1583,6 +1622,7 @@ h1, h2, h3 {
   height: 440px;
   min-height: 0;
   background: var(--bleu-pale);
+  isolation: isolate;
 }
 .benin-map > img,
 .benin-map .map-pin { display: none; }
@@ -1590,6 +1630,91 @@ h1, h2, h3 {
 .benin-map .leaflet-popup-content-wrapper { border-radius: 2px; }
 @media (max-width: 600px) {
   .benin-map { height: 320px; }
+}
+
+/* Corrections finales mobile : aucun focus tactile ne colore une autre page. */
+@media (max-width: 600px) {
+  .main-nav a:hover,
+  .main-nav a:focus-visible {
+    background: transparent;
+    transform: none;
+  }
+  .main-nav a.active,
+  .main-nav a.active:hover,
+  .main-nav a.active:focus-visible {
+    background: var(--bleu-pale);
+    color: var(--bleu-deep) !important;
+    transform: none;
+  }
+
+  .hero-content .eyebrow,
+  .page-hero-content .eyebrow,
+  .about-hero-content .eyebrow {
+    font-size: .72rem !important;
+  }
+  .hero-content h1,
+  .page-hero-content h1,
+  .about-hero-content h1,
+  .hero.page-hero .page-hero-content--full h1,
+  .hero.page-hero-hotels .page-hero-content--full h1,
+  .hero.page-hero-calendar .page-hero-content--full h1,
+  .contact-hero-title {
+    font-size: clamp(1.45rem, 6vw, 2rem) !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+  }
+  .hero-content p,
+  .page-hero-content p,
+  .about-hero-content p,
+  .hero.page-hero .page-hero-content--full p {
+    font-size: .95rem !important;
+    text-align: center !important;
+    margin-inline: auto;
+  }
+  .hero,
+  .hero.page-hero,
+  .about-page .about-hero {
+    align-items: center !important;
+  }
+  .hero-content,
+  .hero.page-hero .page-hero-content--full,
+  .about-page .about-hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0 1rem !important;
+    text-align: center !important;
+  }
+  .hero-content p,
+  .hero.page-hero .page-hero-content--full p {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero-actions,
+  .hero.page-hero .hero-actions {
+    justify-content: center !important;
+  }
+
+  /* « Qui sommes nous » (héros À propos) : même échelle que les autres héros. */
+  .about-page .about-hero-content h1 {
+    font-size: clamp(1.45rem, 6vw, 2rem) !important;
+  }
+
+  /* Premier titre juste sous le héros, page par page. */
+  .destinations h2,
+.stays-intro h2,
+.page-section .section-heading h2 {
+  font-size: clamp(1.6rem, 6.5vw, 2rem) !important;
+}
+.destinations h2 {
+  margin-bottom: 1.25rem !important;
+}
+
+  /* Paragraphe intro accueil (« Le Bénin ne se résume pas… »). */
+  .intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
 }
 
 .benin-map-label {

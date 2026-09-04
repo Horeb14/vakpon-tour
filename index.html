@@ -3,18 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VakponTour · Voyages sur mesure au Bénin</title>
-    <meta
-      name="description"
-      content="VakponTour imagine des voyages sur mesure au Bénin : circuits locaux, hébergements choisis et accompagnement personnalisé."
-    />
+    <title>VakponTour · Agence de voyage locale au Bénin – Circuits sur mesure, Cotonou, Ouidah, Ganvié</title>
+    <meta name="description" content="VakponTour, agence de voyage locale au Bénin : circuits sur mesure, hébergements de charme et accompagnement personnalisé à Cotonou, Ouidah, Porto-Novo, Ganvié et Grand-Popo." />
+    <meta name="keywords" content="voyage Bénin, agence de voyage Bénin, circuit sur mesure Bénin, tourisme Bénin, Cotonou, Ouidah, Ganvié, Porto-Novo, Grand-Popo, Route des Esclaves, cité lacustre Ganvié, voyage Afrique de l'Ouest, séjour Bénin, guide local Bénin, Vodun Days, VakponTour" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="geo.region" content="BJ" />
+    <meta name="geo.placename" content="Bénin" />
+    <link rel="canonical" href="https://vakpon-tour.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VakponTour" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="VakponTour · Agence de voyage locale au Bénin – Circuits sur mesure, Cotonou, Ouidah, Ganvié" />
+    <meta property="og:description" content="VakponTour, agence de voyage locale au Bénin : circuits sur mesure, hébergements de charme et accompagnement personnalisé à Cotonou, Ouidah, Porto-Novo, Ganvié et Grand-Popo." />
+    <meta property="og:url" content="https://vakpon-tour.vercel.app/" />
+    <meta property="og:image" content="https://vakpon-tour.vercel.app/images/hero_a_propos.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VakponTour · Agence de voyage locale au Bénin – Circuits sur mesure, Cotonou, Ouidah, Ganvié" />
+    <meta name="twitter:description" content="VakponTour, agence de voyage locale au Bénin : circuits sur mesure, hébergements de charme et accompagnement personnalisé à Cotonou, Ouidah, Porto-Novo, Ganvié et Grand-Popo." />
+    <meta name="twitter:image" content="https://vakpon-tour.vercel.app/images/hero_a_propos.jpg" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "VakponTour",
+    "description": "Agence de voyages locale au Bénin spécialisée dans les circuits sur mesure : Cotonou, Ouidah, Porto-Novo, Ganvié et Grand-Popo.",
+    "url": "https://vakpon-tour.vercel.app/",
+    "logo": "https://vakpon-tour.vercel.app/images/logo-vakpontour-white.png",
+    "image": "https://vakpon-tour.vercel.app/images/hero_a_propos.jpg",
+    "areaServed": ["Bénin", "Afrique de l'Ouest"],
+    "knowsLanguage": ["fr", "en"],
+    "address": {"@type": "PostalAddress", "addressLocality": "Cotonou", "addressCountry": "BJ"}
+  }
+  </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="preload" as="image" href="images/poster_video_hero_1.jpg" />
+  <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
     <header class="site-header" id="site-header">
@@ -48,7 +78,7 @@
     <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
     <section class="hero">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video autoplay muted loop playsinline class="hero-video" preload="metadata" poster="images/poster_video_hero_1.jpg">
         <source src="videos/video_hero_1.mp4" type="video/mp4" />
       </video>
       <div class="hero-overlay"></div>
@@ -87,7 +117,7 @@
       <div class="dest-list">
         <a href="circuits.html#cotonou" class="dest-item">
           <div class="dest-img">
-            <img src="images/Cotonou_1.jpg" alt="Cotonou" />
+            <img loading="lazy" decoding="async" src="images/Cotonou_1.jpg" alt="Cotonou" />
           </div>
           <div class="dest-text">
             <h3>Cotonou</h3>
@@ -100,7 +130,7 @@
 
         <a href="circuits.html#porto-novo" class="dest-item reverse">
           <div class="dest-img">
-            <img src="images/porto_novo.jpeg" alt="Porto-Novo" />
+            <img loading="lazy" decoding="async" src="images/porto_novo.jpeg" alt="Porto-Novo" />
           </div>
           <div class="dest-text">
             <h3>Porto-Novo</h3>
@@ -113,7 +143,7 @@
 
         <a href="circuits.html#ouidah" class="dest-item">
           <div class="dest-img">
-            <img src="images/Ouidah_1.jpeg" alt="Ouidah" />
+            <img loading="lazy" decoding="async" src="images/Ouidah_1.jpeg" alt="Ouidah" />
           </div>
           <div class="dest-text">
             <h3>Ouidah</h3>
@@ -123,7 +153,7 @@
 
         <a href="circuits.html#grand-popo" class="dest-item reverse">
           <div class="dest-img">
-            <img src="images/grand_popo.jpg" alt="Grand-Popo" />
+            <img loading="lazy" decoding="async" src="images/grand_popo.jpg" alt="Grand-Popo" />
           </div>
           <div class="dest-text">
             <h3>Grand-Popo</h3>
@@ -136,7 +166,7 @@
 
         <a href="circuits.html#ganvie" class="dest-item">
           <div class="dest-img">
-            <img src="images/ganviee.jpg" alt="Ganvié" />
+            <img loading="lazy" decoding="async" src="images/ganviee.jpg" alt="Ganvié" />
           </div>
           <div class="dest-text">
             <h3>Ganvié</h3>
@@ -307,6 +337,8 @@
         <div class="footer-brand">
           <img
             class="footer-logo"
+            loading="lazy"
+            decoding="async"
             src="images/logo-vakpontour-white.png"
             alt="VakponTour"
           />

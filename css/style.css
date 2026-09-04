@@ -624,7 +624,7 @@ h1, h2, h3 {
 .page-hero h1 { font-size: clamp(2.7rem, 5vw, 4.6rem); margin-bottom: 1rem; }
 .page-hero p { max-width: 560px; font-size: 1.08rem; color: rgba(255,255,255,.88); }
 .page-hero-circuits { background-image: url('../images/ouidah.jpeg'); background-position: center 42%; }
-.page-hero-hotels { background-image: url('../images/grppp.png'); background-position: center 42%; }
+.page-hero-hotels { background-image: url('../images/grppp.jpg'); background-position: center 42%; }
 .page-hero-story { background-image: url('../images/porto_novo.jpeg'); background-position: center 40%; }
 .page-hero-contact { background-image: url('../images/cotonou_2.jpg'); background-position: center 42%; }
 
@@ -1004,7 +1004,7 @@ h1, h2, h3 {
 }
 
 .about-page .about-hero {
-  background: url('../images/hero_propos.png') center / cover no-repeat;
+  background: url('../images/hero_propos.jpg') center / cover no-repeat;
   min-height: 100vh;
 }
 .about-page .about-hero::before {
@@ -1141,10 +1141,10 @@ h1, h2, h3 {
   background-position: center 40%;
 }
 .hero.page-hero-calendar {
-  background: url('../images/ouidahhh.png') center 45% / cover no-repeat;
+  background: url('../images/ouidahhh.jpg') center 45% / cover no-repeat;
 }
 .hero.page-hero-contact {
-  background-image: url('../images/hero_contact.png');
+  background-image: url('../images/hero_contact.jpg');
   background-position: center 42%;
 }
 .contact-hero-title {
@@ -1390,7 +1390,7 @@ h1, h2, h3 {
 
 /* ===== Médias optimisés : contact, hébergements et calendrier ===== */
 .hero.page-hero-contact {
-  background-image: url('../images/hero_contact.png');
+  background-image: url('../images/hero_contact.jpg');
   background-position: center;
 }
 .contact-hero-title {

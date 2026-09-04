@@ -188,20 +188,25 @@ document.addEventListener('DOMContentLoaded', function () {
       return toISO(d);
     }
 
-    function applyDepartureConstraint() {
-      var minDep = minDepartureFor(arrivalInput.value);
-      if (minDep) {
-        departureInput.min = minDep;
-        if (departureInput.value && departureInput.value < minDep) {
-          departureInput.value = minDep;
-          departureInput.dispatchEvent(new Event('input', { bubbles: true }));
-        }
-      }
+   function applyDepartureConstraint() {
+  var absoluteMin = toISO(minDate);
+  if (arrivalInput.value && arrivalInput.value < absoluteMin) {
+    arrivalInput.value = absoluteMin;
+  }
+  var minDep = minDepartureFor(arrivalInput.value);
+  if (minDep) {
+    departureInput.min = minDep;
+    if (departureInput.value && departureInput.value < minDep) {
+      departureInput.value = minDep;
+      departureInput.dispatchEvent(new Event('input', { bubbles: true }));
     }
+  }
+}
 
-    ['change', 'input', 'blur'].forEach(function (evt) {
-      arrivalInput.addEventListener(evt, applyDepartureConstraint);
-    });
+['change', 'input', 'blur'].forEach(function (evt) {
+  arrivalInput.addEventListener(evt, applyDepartureConstraint);
+  departureInput.addEventListener(evt, applyDepartureConstraint);
+});
 
     // Validation finale à la soumission (sécurité si le navigateur ignore min).
     tripFormDates.addEventListener('submit', function (event) {

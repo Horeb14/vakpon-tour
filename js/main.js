@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
     var map = L.map(beninMap, { scrollWheelZoom: false, zoomControl: true }).setView([6.40, 2.25], 10);
     // Fond OpenStreetMap public : aucun compte ni API key n'est nécessaire.
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', 
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
       {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap contributors & copy; CARTO'
@@ -162,6 +162,53 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   updateHeaderOnScroll();
   window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+
+  /* ===== Création de voyage : contraintes sur les dates ===== */
+  var MIN_STAY_DAYS = 3;
+  var tripFormDates = document.getElementById('trip-form');
+  if (tripFormDates) {
+    var arrivalInput = document.getElementById('arrival');
+    var departureInput = document.getElementById('departure');
+    // Minimum : aujourd'hui, mais jamais avant 2026. Actualisé à chaque visite.
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var minDate = new Date(2026, 0, 1);
+    if (today > minDate) minDate = today;
+    var toISO = function (d) {
+      return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    };
+    arrivalInput.min = toISO(minDate);
+    departureInput.min = toISO(minDate);
+
+    function minDepartureFor(arrivalValue) {
+      if (!arrivalValue) return null;
+      var d = new Date(arrivalValue + 'T12:00:00');
+      d.setDate(d.getDate() + MIN_STAY_DAYS);
+      return toISO(d);
+    }
+
+    arrivalInput.addEventListener('change', function () {
+      var minDep = minDepartureFor(arrivalInput.value);
+      if (minDep) {
+        departureInput.min = minDep;
+        // La date de départ choisie devient invalide : on la replace au minimum.
+        if (departureInput.value && departureInput.value < minDep) {
+          departureInput.value = minDep;
+          departureInput.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+    });
+
+    // Validation finale à la soumission (sécurité si le navigateur ignore min).
+    tripFormDates.addEventListener('submit', function (event) {
+      var minDep = minDepartureFor(arrivalInput.value);
+      if (arrivalInput.value && departureInput.value && minDep && departureInput.value < minDep) {
+        event.preventDefault();
+        departureInput.value = minDep;
+        departureInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  }
 
   /* ===== Création de voyage : récapitulatif en direct ===== */
   var tripForm = document.getElementById('trip-form');

@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     arrivalInput.min = toISO(minDate);
     departureInput.min = toISO(minDate);
+    departureInput.placeholder = 'Choisissez d’abord votre arrivée';
 
     function minDepartureFor(arrivalValue) {
       if (!arrivalValue) return null;
@@ -187,16 +188,19 @@ document.addEventListener('DOMContentLoaded', function () {
       return toISO(d);
     }
 
-    arrivalInput.addEventListener('change', function () {
+    function applyDepartureConstraint() {
       var minDep = minDepartureFor(arrivalInput.value);
       if (minDep) {
         departureInput.min = minDep;
-        // La date de départ choisie devient invalide : on la replace au minimum.
         if (departureInput.value && departureInput.value < minDep) {
           departureInput.value = minDep;
-          departureInput.dispatchEvent(new Event('change', { bubbles: true }));
+          departureInput.dispatchEvent(new Event('input', { bubbles: true }));
         }
       }
+    }
+
+    ['change', 'input', 'blur'].forEach(function (evt) {
+      arrivalInput.addEventListener(evt, applyDepartureConstraint);
     });
 
     // Validation finale à la soumission (sécurité si le navigateur ignore min).
